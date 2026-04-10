@@ -1,6 +1,6 @@
-import imgAsceBgRevealTheTheme2025Nov71 from "figma:asset/1424246431724903d8a0e7ab2351b55e8e6cbf82.png";
-import imgBearGardenWi26SaveTheDateF01011 from "figma:asset/2a83728466b066f251e677128eabd1b1870e1967.png";
-import imgAsgsBearGardenSpringTeaser2026March121 from "figma:asset/d8770d97fc735f7dea5471be11ecc64d7f68573d.png";
+import imgAsceBgRevealTheTheme2025Nov71 from "/src/assets/past-events/past-1.png";
+import imgBearGardenWi26SaveTheDateF01011 from "/src/assets/past-events/past-2.png";
+import imgAsgsBearGardenSpringTeaser2026March121 from "/src/assets/past-events/past-3.png";
 
 const events = [
   {

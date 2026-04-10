@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import imgAsceBgVidnet2025Nov71 from "figma:asset/632d4de2295ca7ce14d306447f86bc0a0f26384e.png";
-import imgAsceBgRevealTheTheme2025Nov71 from "figma:asset/1424246431724903d8a0e7ab2351b55e8e6cbf82.png";
-import imgAsgsBearGardenSpringTeaser2026March121 from "figma:asset/d8770d97fc735f7dea5471be11ecc64d7f68573d.png";
+import imgAsceBgVidnet2025Nov71 from "/src/assets/hero-carousel/header-1.png";
+import imgAsceBgRevealTheTheme2025Nov71 from "/src/assets/hero-carousel/header-2.png";
+import imgAsgsBearGardenSpringTeaser2026March121 from "/src/assets/hero-carousel/header-3.png";
 
 const heroImages = [
   imgAsceBgVidnet2025Nov71,
@@ -24,6 +24,15 @@ export default function HeroCarousel() {
     setCurrentIndex(index);
   };
 
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % heroImages.length);
+  };
+
+  const prevSlide = () => {
+    // Adding heroImages.length ensures the number is never negative
+    setCurrentIndex((prev) => (prev - 1 + heroImages.length) % heroImages.length);
+  };
+
   return (
     <section className="relative bg-[#00588c]">
       {/* Carousel Images */}
@@ -44,13 +53,6 @@ export default function HeroCarousel() {
         ))}
       </div>
 
-      {/* Hero Title Overlay */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <h1 className="text-white text-4xl md:text-6xl lg:text-7xl text-center px-6 font-['Ogg'] max-w-6xl">
-          Lorem Ipsum
-        </h1>
-      </div>
-
       {/* Indicators */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2">
         {heroImages.map((_, index) => (
@@ -63,7 +65,25 @@ export default function HeroCarousel() {
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
+        
       </div>
+
+      {/* Navigation Buttons */}
+      <button
+        onClick={prevSlide}
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-2 bg-white/20 hover:bg-white/40 rounded-full transition-all"
+        aria-label="Previous slide"
+      >
+        <img src="/src/assets/left-arrow.png" alt="Prev" className="w-10 h-10" />
+      </button>
+
+      <button
+        onClick={nextSlide}
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-2 bg-white/20 hover:bg-white/40 rounded-full transition-all"
+        aria-label="Next slide"
+      >
+        <img src="/src/assets/right-arrow.png" alt="Next" className="w-10 h-10" />
+      </button>
     </section>
   );
 }
