@@ -5,6 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "./ui/accordion";
+import ScrollReveal from "./ScrollReveal";
 
 const details = [
   {
@@ -42,6 +43,7 @@ export default function DetailsSection() {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
+  // If it's mobile, show the accordion. Otherwise, show the grid.
   if (isMobile) {
     return (
       <section className="py-12 px-6 max-w-7xl mx-auto">
@@ -67,44 +69,52 @@ export default function DetailsSection() {
     <section className="py-16 px-6 max-w-7xl mx-auto">
       <div className="grid grid-cols-2 gap-x-16 gap-y-12">
         {/* Food */}
-        <div>
-          <h3 className="text-2xl font-['Athiti'] font-semibold text-[#272729] mb-4">
-            {details[0].title}
-          </h3>
-          <p className="text-lg font-['Poppins'] text-[#28282b] leading-relaxed tracking-tight">
-            {details[0].content}
-          </p>
-        </div>
+          <ScrollReveal direction="left" delay={0.3}>
+          <div>
+            <h3 className="text-2xl font-['Athiti'] font-semibold text-[#272729] mb-4">
+              {details[0].title}
+            </h3>
+            <p className="text-lg font-['Poppins'] text-[#28282b] leading-relaxed tracking-tight">
+              {details[0].content}
+            </p>
+          </div>
+        </ScrollReveal>
 
         {/* Merch */}
-        <div>
-          <h3 className="text-2xl font-['Athiti'] font-semibold text-[#272729] mb-4">
-            {details[1].title}
-          </h3>
-          <p className="text-lg font-['Poppins'] text-[#28282b] leading-relaxed tracking-tight">
-            {details[1].content}
-          </p>
-        </div>
+        <ScrollReveal direction="right" delay={0.3}>
+          <div>
+            <h3 className="text-2xl font-['Athiti'] font-semibold text-[#272729] mb-4">
+              {details[1].title}
+            </h3>
+            <p className="text-lg font-['Poppins'] text-[#28282b] leading-relaxed tracking-tight">
+              {details[1].content}
+            </p>
+          </div>
+        </ScrollReveal>
 
         {/* Attractions */}
-        <div>
-          <h3 className="text-2xl font-['Athiti'] font-semibold text-[#272729] mb-4">
-            {details[2].title}
-          </h3>
-          <p className="text-lg font-['Poppins'] text-[#28282b] leading-relaxed tracking-tight">
-            {details[2].content}
-          </p>
-        </div>
+        <ScrollReveal direction="left" delay={0.5}>
+          <div>
+            <h3 className="text-2xl font-['Athiti'] font-semibold text-[#272729] mb-4">
+              {details[2].title}
+            </h3>
+            <p className="text-lg font-['Poppins'] text-[#28282b] leading-relaxed tracking-tight">
+              {details[2].content}
+            </p>
+          </div>
+        </ScrollReveal>
 
         {/* Prizes */}
-        <div>
-          <h3 className="text-2xl font-['Athiti'] font-semibold text-[#272729] mb-4">
-            {details[3].title}
-          </h3>
-          <p className="text-lg font-['Poppins'] text-[#28282b] leading-relaxed tracking-tight">
-            {details[3].content}
-          </p>
-        </div>
+        <ScrollReveal direction="right" delay={0.5}>
+          <div>
+            <h3 className="text-2xl font-['Athiti'] font-semibold text-[#272729] mb-4">
+              {details[3].title}
+            </h3>
+            <p className="text-lg font-['Poppins'] text-[#28282b] leading-relaxed tracking-tight">
+              {details[3].content}
+            </p>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );
