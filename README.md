@@ -42,6 +42,8 @@ In approaching this challenge, my goal was to bridge the gap between static desi
 
 - **Research**: Some research I did was referencing the current A.S. Graphic Studio website and UCSD official websites, capturing a similar vibe and structure to the best of my ability to reflect what work would most be expected from me.
 
+- **Footer links**: Regarding the footer, I wasn’t entirely sure whether it should be linked, but I have linked the email, Instagram, and LinkedIn to the official ASGS accounts. For the "Resume" link, I have linked it to my personal resume for your convenience.
+
 
 ## 💻 Getting Started
 
