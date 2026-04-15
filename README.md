@@ -23,12 +23,15 @@ The architecture focuses on clean componentization, robust state management, and
 ## ✨ Key Features & Highlights
 
 * **Fluid Animations:** Integrated `framer-motion` for smooth, directional scroll reveals (e.g., items sliding in from the left/right) and staggered entry animations for the Past Events grid.
-* **Responsive Architecture:** * Features a custom hook (`useIsMobile`) to conditionally render optimized layouts.
+* **Responsive Architecture:** Features a custom hook (`useIsMobile`) to conditionally render optimized layouts.
   * The "Details" section dynamically switches from a desktop CSS Grid layout to a mobile-friendly Accordion.
   * Fully functional, state-driven mobile hamburger navigation menu.
 * **Custom Image Carousel:** Built a fully controlled `HeroCarousel` with auto-play functionality, dot indicators, and manual navigation.
 * **Accessible UI Components:** Leveraged `@radix-ui/react-*` primitives to ensure components like Accordions and standard UI elements remain accessible and keyboard-friendly.
 * **Clean Project Structure:** Modular design separating UI primitives (`src/app/components/ui/`), main layout components, and global styles.
+
+**Check out the website [here](https://nicolesutedja.github.io/2026AsgsWebmasterChallenge/) or you can also follow the directions below to get a local copy running!**
+
 
 ## 💻 Getting Started
 
