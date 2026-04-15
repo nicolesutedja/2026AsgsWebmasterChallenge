@@ -11,7 +11,7 @@ export default function Header() {
   return (
     <header className="bg-[#00588c] text-white py-6 px-6 md:px-12 sticky top-0 z-50">
       <div className="max-w-[1440px] mx-auto flex items-center justify-between">
-        <div className="text-xl uppercase font-['Poppins'] tracking-tight">
+          <div className="text-xl uppercase font-['Poppins'] tracking-tight">
           Lorem Ipsum
         </div>
         

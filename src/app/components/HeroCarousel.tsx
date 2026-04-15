@@ -38,7 +38,7 @@ export default function HeroCarousel() {
   return (
     <section className="relative bg-[#00588c]">
       {/* Carousel Images */}
-      <div className="relative h-[400px] md:h-[600px] lg:h-[828px] overflow-hidden">
+      <div className="relative max-w-full mx-auto aspect-[16/9] md:aspect-[1440/828] overflow-hidden shadow-2xl">
         {heroImages.map((img, index) => (
           <div
             key={index}
@@ -76,7 +76,7 @@ export default function HeroCarousel() {
         className="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-2 bg-white/20 hover:bg-white/40 rounded-full transition-all"
         aria-label="Previous slide"
       >
-        <img src="/src/assets/left-arrow.png" alt="Prev" className="w-8 h-8" />
+        <img src={leftArrow} alt="Prev" className="w-8 h-8" />
       </button>
 
       <button
@@ -84,7 +84,7 @@ export default function HeroCarousel() {
         className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-2 bg-white/20 hover:bg-white/40 rounded-full transition-all"
         aria-label="Next slide"
       >
-        <img src="/src/assets/right-arrow.png" alt="Next" className="w-8 h-8" />
+        <img src={rightArrow} alt="Next" className="w-8 h-8" />
       </button>
     </section>
   );

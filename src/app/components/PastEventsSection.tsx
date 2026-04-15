@@ -9,33 +9,34 @@ const events = [
     date: "November 21, 2025",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius eu metus et scelerisque.",
     image: imgAsceBgRevealTheTheme2025Nov71,
+    position: "object-top",
   },
   {
     title: "The Rise of ASCE Bear",
     date: "February 20, 2026",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius eu metus et scelerisque.",
     image: imgBearGardenWi26SaveTheDateF01011,
+    position: "object-top",
   },
   {
     title: "My Little ASCE Bear",
     date: "April 3, 2026",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius eu metus et scelerisque.",
     image: imgAsgsBearGardenSpringTeaser2026March121,
+    position: "object-center",
   },
 ];
 
-// 1. Define the orchestration for the grid (the parent)
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2, // This creates the "one by one" delay (0.2s between cards)
+      staggerChildren: 0.2,
     },
   },
 };
 
-// 2. Define how each individual card should move
 const cardVariants = {
   hidden: { opacity: 0, y: 40 },
   visible: { 
@@ -52,8 +53,7 @@ export default function PastEventsSection() {
         Past Events
       </h2>
       
-      <div className="border-2 border-[#979797] rounded-3xl p-6 md:p-12 lg:p-14">
-        {/* 3. Turn the grid into a motion.div and apply containerVariants */}
+      <div className="border-2 border-[#979797] rounded-3xl p-4 md:p-12 lg:p-14">
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
           variants={containerVariants}
@@ -64,15 +64,14 @@ export default function PastEventsSection() {
           {events.map((event, index) => (
             <motion.div
               key={index}
-              variants={cardVariants} // 4. Apply cardVariants to each child
+              variants={cardVariants} 
               className="border-2 border-[#d9d9d9] rounded-lg overflow-hidden hover:shadow-lg hover:scale-103 transition-shadow transition-transform group duration-500"
             >
               <div className="h-64 md:h-72 lg:h-80 overflow-hidden bg-gray-100">
                 <img
                   src={event.image}
                   alt={event.title}
-                  className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
-                />
+                  className={`w-full h-full object-cover ${event.position} group-hover:scale-110 transition-transform duration-500`}                />
               </div>
               
               <div className="p-6 md:p-8 text-center">

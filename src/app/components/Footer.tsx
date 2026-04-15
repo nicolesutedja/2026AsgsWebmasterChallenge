@@ -7,14 +7,14 @@ export default function Footer() {
         </p>
         
         <nav className="flex flex-wrap justify-center gap-4 md:gap-11 font-['Poppins'] text-base uppercase tracking-tight">
-          <a href="mailto:contact@example.com" className="hover:opacity-80 transition-opacity">
+          <a href="mailto:asgraphicstudio@ucsd.edu" className="hover:opacity-80 transition-opacity">
             Email
           </a>
-          <a href="#resume" className="hover:opacity-80 transition-opacity">
+          <a href="https://drive.google.com/file/d/1OziEMDd7xvoDVOUGmCJ4nJzKcFqn8KjN/view?usp=drive_link" className="hover:opacity-80 transition-opacity">
             Resume
           </a>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/asgraphicstudio/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:opacity-80 transition-opacity"
@@ -22,7 +22,7 @@ export default function Footer() {
             Instagram
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://linkedin.com/company/asgraphicstudio"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:opacity-80 transition-opacity"
