@@ -11,6 +11,8 @@ This repository contains my submission for the A.S. Graphics Studio Webmaster co
 
 The architecture focuses on clean componentization, robust state management, and a highly polished user experience using modern web animation techniques and accessible UI primitives.
 
+**Check out the website [here](https://nicolesutedja.github.io/2026AsgsWebmasterChallenge/) or you can also follow the directions below to get a local copy running!**
+
 ### Built With
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
@@ -30,7 +32,17 @@ The architecture focuses on clean componentization, robust state management, and
 * **Accessible UI Components:** Leveraged `@radix-ui/react-*` primitives to ensure components like Accordions and standard UI elements remain accessible and keyboard-friendly.
 * **Clean Project Structure:** Modular design separating UI primitives (`src/app/components/ui/`), main layout components, and global styles.
 
-**Check out the website [here](https://nicolesutedja.github.io/2026AsgsWebmasterChallenge/) or you can also follow the directions below to get a local copy running!**
+## 💡 Planning, Ideation & Research
+
+In approaching this challenge, my goal was to bridge the gap between static design and a fluid, accessible user experience:
+
+- **Tech Stack Choice**: I chose React and TypeScript for robust component architecture, paired with the brand-new Tailwind CSS v4 to leverage the latest performance optimizations. 
+
+- **Animation choices**: I wanted to make sure that the animations made the website feel clean, friendly and in a way that wasn't too flashy. I took advantage of different animations throughout, most notably the staggered pop-up animation for the Past Events Section.
+
+- **Visual Polish**: I ensured the Hero Carousel maintained its exact aspect ratio across all viewports so that no artwork was cropped. Similarly, I adjusted the view for all images in the Past Events section to match the Figma and ensure no text is cropped.
+
+- **Research**: Some research I did was referencing the current A.S. Graphic Studio website and UCSD official websites, capturing a similar vibe and structure to the best of my ability to reflect what work would most be expected from me.
 
 
 ## 💻 Getting Started
