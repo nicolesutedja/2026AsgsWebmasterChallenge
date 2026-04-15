@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import imgAsceBgVidnet2025Nov71 from "/src/assets/hero-carousel/header-1.png";
 import imgAsceBgRevealTheTheme2025Nov71 from "/src/assets/hero-carousel/header-2.png";
 import imgAsgsBearGardenSpringTeaser2026March121 from "/src/assets/hero-carousel/header-3.png";
+import leftArrow from "/src/assets/left-arrow.png";
+import rightArrow from "/src/assets/right-arrow.png";
 
 const heroImages = [
   imgAsceBgVidnet2025Nov71,
