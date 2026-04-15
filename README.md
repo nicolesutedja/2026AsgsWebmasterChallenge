@@ -9,8 +9,6 @@
 
 This repository contains my submission for the A.S. Graphics Studio Webmaster coding challenge. I have built a fully responsive, interactive single-page event website dedicated to **ASCE Bear Gardens** based on the Figma provided. 
 
-The architecture focuses on clean componentization, robust state management, and a highly polished user experience using modern web animation techniques and accessible UI primitives.
-
 **Check out the website [here](https://nicolesutedja.github.io/2026AsgsWebmasterChallenge/) or you can also follow the directions below to get a local copy running!**
 
 ### Built With
