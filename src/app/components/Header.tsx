@@ -44,25 +44,21 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile Menu Dropdown with Framer Motion */}
+      {/* Mobile Menu Dropdown */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.nav 
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            // overflow-hidden is critical here so the text doesn't spill out while the height is animating
-            className="md:hidden overflow-hidden"
+            initial={{ height: 0 }}
+            animate={{ height: "auto" }}
+            exit={{ height: 0 }}
+            transition={{ duration: 0.3, ease: "easeOut" }} // Custom smooth ease
+            className="md:hidden absolute left-0 right-0 top-full bg-[#00588c] shadow-2xl z-50 overflow-hidden"
           >
-            {/* Inner container: We put the padding and margins here instead of the motion.nav.
-              If you animate height: 0 on an element with vertical padding, it causes visual jumping.
-            */}
-            <div className="mt-6 flex flex-col gap-6 font-['Poppins'] text-base uppercase tracking-tight border-t border-white/20 pt-6 pb-2">
-              <a href="#home" className="hover:opacity-80 transition-opacity" onClick={toggleMenu}>Home</a>
-              <a href="#about" className="hover:opacity-80 transition-opacity" onClick={toggleMenu}>About</a>
-              <a href="#contact" className="hover:opacity-80 transition-opacity" onClick={toggleMenu}>Contact</a>
-              <a href="#work" className="hover:opacity-80 transition-opacity" onClick={toggleMenu}>Work</a>
+            <div className="flex flex-col gap-8 font-['Poppins'] text-base uppercase tracking-widest px-8 py-10 border-t border-white/10">
+              <a href="#home" className="hover:text-gray-300 transition-colors" onClick={toggleMenu}>Home</a>
+              <a href="#about" className="hover:text-gray-300 transition-colors" onClick={toggleMenu}>About</a>
+              <a href="#contact" className="hover:text-gray-300 transition-colors" onClick={toggleMenu}>Contact</a>
+              <a href="#work" className="hover:text-gray-300 transition-colors" onClick={toggleMenu}>Work</a>
             </div>
           </motion.nav>
         )}
